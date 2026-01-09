@@ -1,0 +1,26 @@
+name: deploy
+on:
+  workflow_dispatch:
+
+jobs: 
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+
+      - uses: actions/checkout@v6
+
+      - name: Installing Task
+        uses: arduino/setup-task@v1
+      
+      - name: Configure kubectl
+        run: |
+          mkdir -p ~/.kube
+          echo "${{ secrets.KUBECONFIG }}" > ~/.kube/config
+
+      - name: Deploy
+        run: |
+          kubectl apply -n sirius -f ./deployments/k8s/api-service/
+          kubectl apply -n sirius -f ./deployments/k8s/info-service/
+          kubectl apply -n sirius -f ./deployments/k8s/login-service/
+          kubectl apply -n sirius -f ./deployments/k8s/root-service/
+          kubectl apply -n sirius -f ./deployments/k8s/ingress.yaml

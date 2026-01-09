@@ -1,0 +1,18 @@
+name: testing all good
+on: 
+  workflow_dispatch: 
+jobs:
+  test_golang:
+    runs-on: ubuntu-latest
+    steps:
+
+      - name: Job start
+        run: echo "Job by ${{ github.event_name }}."
+
+      - name: Installing GoLang v1.25.4
+        uses: actions/setup-go@v6
+        with:
+          go-version: "1.25.4"
+
+      - name: Displaying Go version
+        run: go version
