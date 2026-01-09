@@ -19,17 +19,17 @@ spec:
             port: 
               number: 80
       - pathType: Root
-        path: /api
-        backend:
-          service:
-            name: api-service
-            port: 
-              number: 80
-      - pathType: Root
         path: /info
         backend:
           service:
             name: info-service
+            port: 
+              number: 80
+      - pathType: Root
+        path: /api
+        backend:
+          service:
+            name: api-service
             port: 
               number: 80
       - pathType: Root
