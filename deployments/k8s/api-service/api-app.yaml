@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
         - name: api-app
-          image: Tracebacker/api-app:latest
+          image: 48342255325/api-app:latest
           imagePullPolicy: IfNotPresent
           resources:
             requests:

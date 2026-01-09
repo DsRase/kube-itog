@@ -22,7 +22,7 @@ jobs:
           file: ./cmd/api-service/Dockerfile
           push: true
           tags: |
-            Tracebacker/api-service:latest
+            48342255325/api-service:latest
       
       - name: Build & push info-service
         uses: docker/build-push-action@v5
@@ -31,7 +31,7 @@ jobs:
           file: ./cmd/info-service/Dockerfile
           push: true
           tags: |
-            Tracebacker/api-info:latest
+            48342255325/api-info:latest
 
       - name: Build & push login-service
         uses: docker/build-push-action@v5
@@ -40,7 +40,7 @@ jobs:
           file: ./cmd/login-service/Dockerfile
           push: true
           tags: |
-            Tracebacker/api-login:latest
+            48342255325/api-login:latest
       
       - name: Build & push root-service
         uses: docker/build-push-action@v5
@@ -49,7 +49,7 @@ jobs:
           file: ./cmd/root-service/Dockerfile
           push: true
           tags: |
-            Tracebacker/api-root:latest
+            48342255325/api-root:latest
 
       - name: Status
         run: echo "Status is ${{ job.status }}."

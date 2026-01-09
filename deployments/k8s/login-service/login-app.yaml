@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
         - name: login-app
-          image: Tracebacker/login-app:latest
+          image: 48342255325/login-app:latest
           imagePullPolicy: IfNotPresent
           resources:
             requests:

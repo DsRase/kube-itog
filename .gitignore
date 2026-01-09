@@ -35,6 +35,8 @@ go.work.sum
 # env file
 .env
 
+Taskfile.yaml
+
 # Editor/IDE
 # .idea/
 # .vscode/

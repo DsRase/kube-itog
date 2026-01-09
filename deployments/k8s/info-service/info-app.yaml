@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
         - name: info-app
-          image: Tracebacker/info-app:latest
+          image: 48342255325/info-app:latest
           imagePullPolicy: IfNotPresent
           resources:
             requests:
