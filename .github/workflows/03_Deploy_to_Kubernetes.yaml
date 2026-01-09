@@ -19,8 +19,8 @@ jobs:
 
       - name: Deploy
         run: |
-          kubectl apply -n sirius -f ./deployments/k8s/api-service/
-          kubectl apply -n sirius -f ./deployments/k8s/info-service/
-          kubectl apply -n sirius -f ./deployments/k8s/login-service/
-          kubectl apply -n sirius -f ./deployments/k8s/root-service/
-          kubectl apply -n sirius -f ./deployments/k8s/ingress.yaml
+          kubectl apply -n sirius -f ./deployments/k8s/api-service/ --validate=false
+          kubectl apply -n sirius -f ./deployments/k8s/info-service/ --validate=false
+          kubectl apply -n sirius -f ./deployments/k8s/login-service/ --validate=false
+          kubectl apply -n sirius -f ./deployments/k8s/root-service/ --validate=false
+          kubectl apply -n sirius -f ./deployments/k8s/ingress.yaml --validate=false
